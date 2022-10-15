@@ -1,15 +1,9 @@
 /* Box Model Hack */
 * {
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* CSS variables */
-:root {
-  --main-bg-color: hsl(200, 44 22%);
-  --main-color: ;
-
-  --main-h1-color: ;
-}
 
 /******************************************
 /* BASE STYLES
@@ -25,18 +19,19 @@ body {
 
 body p {
   font-size: 15px;
+  font-family: "Outfit", sans-serif;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 main {
-  height: 65%;
-  width: 21%;
+  width: 18%;
   padding: 1rem;
-  border: 1px solid rgb(188, 192, 194);
+  /* border: 1px solid rgb(188, 192, 194); */
   background-color: white;
   border-radius: 1rem;
+  box-shadow: 1px 1px 1px 1px rgb(211, 208, 208);
 }
 
 .qr-container {
@@ -44,16 +39,29 @@ main {
   height: 58%;
 }
 
-.text-container {
+.text-container h1 {
+  font-family: "Outfit", sans-serif;
+
+  width: 88%;
+  margin: 0 auto;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+
+  font-size: large;
+  margin-top: 1rem;
 }
 
+.text-container p {
+  width: 88%;
+  margin: 0 auto;
+  font-weight: 400;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 .qr-img {
   width: 100%;
   height: 100%;
-  border: 1px solid lightgray;
   border-radius: 1rem;
 
   overflow: hidden;
@@ -64,4 +72,30 @@ img {
 
   height: 100%;
   object-fit: cover;
+}
+
+/* Media Query rules */
+
+@media screen and (max-width: 1000px) {
+  main {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    width: 80%;
+  }
 }
